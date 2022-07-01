@@ -44,7 +44,7 @@ public class BeerController {
   @DeleteMapping("/{beerId}")
   public ResponseEntity deleteBeerById(@PathVariable("beerId") UUID beerId) {
 
-    //todo impl
+    //todo implEMENT
     return new ResponseEntity(NO_CONTENT);
   }
 }
