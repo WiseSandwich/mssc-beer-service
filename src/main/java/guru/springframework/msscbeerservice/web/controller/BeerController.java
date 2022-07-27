@@ -6,6 +6,7 @@ import static org.springframework.http.HttpStatus.OK;
 
 import guru.springframework.msscbeerservice.web.model.BeerDto;
 import java.util.UUID;
+import javax.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,14 +29,14 @@ public class BeerController {
   }
 
   @PostMapping
-  public ResponseEntity savedNewBeer(@RequestBody BeerDto beerDto) {
+  public ResponseEntity savedNewBeer(@RequestBody @Valid BeerDto beerDto) {
 
     //todo impl
     return new ResponseEntity(CREATED);
   }
 
   @PutMapping("/{beerId}")
-  public ResponseEntity updateBeerById(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto) {
+  public ResponseEntity updateBeerById(@PathVariable("beerId") UUID beerId, @RequestBody @Valid BeerDto beerDto) {
 
     //todo impl
     return new ResponseEntity(NO_CONTENT);
